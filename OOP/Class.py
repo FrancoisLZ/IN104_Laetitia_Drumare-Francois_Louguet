@@ -1,5 +1,5 @@
 
-class vehicules:
+class Vehicule:
     def __init__(self,color, brand, price):
         self.color = color
         self.brand = brand
@@ -17,7 +17,7 @@ class vehicules:
     def method3(self):
         return (self.price)
 
-class cars(vehicules):
+class Car(Vehicule):
 
     def details(self, car_boot_size, width):
         self.__car_boot_size = car_boot_size
@@ -33,7 +33,7 @@ class cars(vehicules):
     def size(self):
         print("This car is" +str(self.width)+"meters large")
 
-class motorbike(vehicules):
+class Motorbike(Vehicule):
 
     def details(self,weight,engine_power):
         self.__weight = weight
