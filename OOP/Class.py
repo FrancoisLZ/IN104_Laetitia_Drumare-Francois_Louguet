@@ -1,41 +1,48 @@
 
 class Vehicule:
+    """ on definit ici la superclasse "Vehicule" """
+    
     def __init__(self,color, brand, price):
         self.color = color
         self.brand = brand
         self.price = price
 
 
-    #affichage des différents paramètres
+    # methodes de la classe "Vehicule"
 
-    def method1(self):
+    def get_color(self):
         return (self.color)
 
-    def method2(self):
+    def get_brand(self):
         return (self.brand)
 
-    def method3(self):
+    def get_price(self):
         return (self.price)
 
 class Car(Vehicule):
-
-    def details(self, car_boot_size, width):
+    """ on definit ici la premiere sous classe "Car" """
+    
+    # methodes de la classe "Car"
+    
+    def details_car(self, car_boot_size, width):
         self.__car_boot_size = car_boot_size
         self.__width = width
 
-        
     def get_width(self):     
         return (self.__width)
 
     def identity(self):
-        print("This car is"+str(method1(self))+ "of the brand" +str(method2(self)))
+        print("This car is a"+str(get_color(self))+ "car of the brand" +str(get_brand(self)))
 
     def size(self):
-        print("This car is" +str(self.width)+"meters large")
+        print("This car is" +str(self.__width)+"meters large")
 
 class Motorbike(Vehicule):
+    """ on definit ici la deuxieme sous classe "Motorbike" """
 
-    def details(self,weight,engine_power):
+    #methodes de la classe "Motorbike"
+    
+    def details_motorbike(self,weight,engine_power):
         self.__weight = weight
         self.__engine_power= engine_power
 
@@ -43,7 +50,14 @@ class Motorbike(Vehicule):
         return self.__weight
 
     def __get_power(self):
-        print (self.engine_power)
+        print (self.__engine_power)
 
     def define(self):
-        print("This motorcycle weighs exactly" +str(self.__weight)+"pounds and has a motor power of" + str(self.engine_power))
+        print("This motorcycle weighs exactly" +str(self.__weight)+"pounds and has a motor power of" + str(self.__engine_power))
+
+        
+        
+        
+        
+        
+        
