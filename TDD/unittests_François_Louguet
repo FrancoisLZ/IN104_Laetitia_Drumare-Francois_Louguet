@@ -1,1 +1,5 @@
 
+import unittest
+
+from fichier import fonction
+
