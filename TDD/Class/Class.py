@@ -31,10 +31,10 @@ class Car(Vehicule):
         return (self.__width)
 
     def identity(self):
-        print("This car is a"+str(get_color(self))+ "car of the brand" +str(get_brand(self)))
+        print("This car is a "+str(Vehicule.get_color(self))+ " car of the brand " +str(Vehicule.get_brand(self)))
 
     def size(self):
-        print("This car is" +str(self.__width)+"meters large")
+        print("This car is " +str(self.__width)+" meters large")
 
 class Motorbike(Vehicule):
     """ on definit ici la deuxieme sous classe "Motorbike" """
@@ -48,11 +48,11 @@ class Motorbike(Vehicule):
     def get_weight(self):
         return self.__weight
 
-    def __get_power(self):
-        print (self.__engine_power)
+    def get_power(self):
+        return self.__engine_power
 
     def define(self):
-        print("This motorcycle weighs exactly" +str(self.__weight)+"pounds and has a motor power of" + str(self.__engine_power))
+        print("This motorcycle weighs exactly " +str(self.__weight)+" pounds and has a motor power of " + str(self.__engine_power))
 
         
         
