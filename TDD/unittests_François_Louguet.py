@@ -1,34 +1,31 @@
 import unittest
-
-from Class import get_color
-from Class import get_brand
-from Class import get_price
-from Class import get_width
+import classe
 
 
 class FonctionsTest(unittest.TestCase):
     
    
-    
+     
     def test_get_color(self):
         """ teste le fonctionnement de get_color"""
-        v=Vehicule("jaune","lamborghini",500000)
-        self.assertEqual(get_color(v),"jaune")
+        v=classe.Car("jaune","lamborghini",500000)
+        self.assertEqual(classe.Car.get_color(v),"jaune")
 
     def test_get_brand(self):
         """ teste le fonctionnement de get_brand"""
-        v=Vehicule("jaune","lamborghini",500000)
-        self.assertEqual(get_brand(v),"lamborghini")
+        v=classe.Car("jaune","lamborghini",500000)
+        self.assertEqual(classe.Car.get_brand(v),"lamborghini")
     
     def test_get_price(self):
         """ teste le fonctionnement de get_price"""
-        v=Vehicule("jaune","lamborghini",500000)
-        self.assertEqual(get_price(v),500000)
+        v=classe.Car("jaune","lamborghini",500000)
+        self.assertEqual(classe.Car.get_price(v),500000)
 
     def test_get_width(self):
         """ teste le fonctionnement de get_width"""
-        c=Car(2,3)
-        self.assertEqual(get_width(c),3)
+        v=classe.Car("jaune","lamborghini",500000)
+        classe.Car.details_car(v,2,3)
+        self.assertEqual(classe.Car.get_width(v),3)
 
 if __name__=="__main__":
     unittest.main()
